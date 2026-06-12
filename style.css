@@ -1,0 +1,61 @@
+body {
+    background: #1a0f0d url('assets/fond_ekang.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Garamond', serif;
+    margin: 0; display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    height: 100vh; width: 100vw; overflow: hidden; color: white;
+}
+
+body::before {
+    content: ""; position: absolute; top:0; left:0; right:0; bottom:0;
+    background: rgba(0, 0, 0, 0.7); z-index: -1;
+}
+
+#ecran-accueil { text-align: center; }
+.titre-royal { font-size: 4em; color: #f1c40f; text-shadow: 0 0 20px #b8860b; margin-bottom: 30px; }
+.btn-start {
+    padding: 20px 40px; font-size: 1.8em; background: #f1c40f; border: none;
+    border-radius: 50px; cursor: pointer; font-weight: bold; color: #3e2723;
+    animation: clignoter 1.5s infinite;
+}
+@keyframes clignoter {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 10px #f1c40f; }
+    50% { transform: scale(1.05); box-shadow: 0 0 30px #f1c40f; }
+}
+
+.plateau-3d {
+    background: #5d4037; padding: 30px; border-radius: 40px;
+    border-bottom: 20px solid #2b1d1a; border-right: 12px solid #3e2723;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+}
+
+.ligne-complete { display: flex; align-items: center; margin: 15px 0; }
+.nom-camp-label { width: 160px; font-size: 1.2em; color: #f1c40f; font-weight: bold; text-align: right; margin-right: 20px; }
+.rangee { display: flex; gap: 15px; }
+
+.trou {
+    width: 80px; height: 80px; background: #1a0f0d; border-radius: 50%;
+    position: relative; cursor: pointer;
+    box-shadow: inset 5px 5px 15px rgba(0,0,0,0.9);
+    display: flex; flex-wrap: wrap; justify-content: center; align-content: center; padding: 5px;
+}
+
+.compteur-bulle {
+    position: absolute; top: -8px; right: -8px;
+    background: #f1c40f; color: #000; width: 25px; height: 25px;
+    border-radius: 50%; font-weight: bold; display: flex;
+    justify-content: center; align-items: center; border: 2px solid #3e2723; font-size: 0.8em;
+}
+
+.graine { width: 10px; height: 10px; background: radial-gradient(circle, #f1c40f, #b8860b); border-radius: 50%; margin: 1px; }
+
+#jeu-container { display: flex; flex-direction: column; align-items: center; }
+.score-container { display: flex; align-items: center; gap: 40px; margin-bottom: 20px; }
+#phrase-tour { font-size: 1.3em; padding: 10px 20px; border: 2px solid #f1c40f; border-radius: 15px; background: rgba(0,0,0,0.5); min-width: 250px; text-align: center; }
+.score-lumineux { font-size: 2.5em; text-shadow: 0 0 10px #f1c40f; text-align: center; }
+.label-score { font-size: 0.4em; display: block; }
+.btn-reset { margin-top: 20px; padding: 10px 25px; background: #c0392b; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
+
+;
+}
